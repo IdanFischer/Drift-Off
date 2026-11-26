@@ -1,0 +1,19 @@
+# Local PostgreSQL for development: `docker compose up -d`
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: drift
+      POSTGRES_USER: drift
+      POSTGRES_PASSWORD: drift   # local development only
+    ports:
+      - "5432:5432"
+    volumes:
+      - drift-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U drift -d drift"]
+      interval: 5s
+      retries: 10
+
+volumes:
+  drift-db:

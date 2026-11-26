@@ -1,0 +1,14 @@
+@api = http://localhost:5080
+
+GET {{api}}/api/summary/today
+
+###
+
+POST {{api}}/api/sleep-logs
+Content-Type: application/json
+
+{ "nightOf": "2026-11-25", "bedtime": "22:48", "wakeTime": "06:30" }
+
+###
+
+GET {{api}}/api/sleep-logs
