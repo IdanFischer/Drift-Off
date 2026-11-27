@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Drift.Api/Drift.Api.csproj" />
+  <Project Path="Drift.Core/Drift.Core.csproj" />
+  <Project Path="Drift.Infrastructure/Drift.Infrastructure.csproj" />
+  <Project Path="Drift.Tests/Drift.Tests.csproj" />
+</Solution>

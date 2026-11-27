@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/*
+ * Drift design tokens, sampled from the Figma frames.
+ * Tailwind v4 turns every --color-* here into utilities: bg-night, text-moonlight, border-line, …
+ */
+@theme {
+  --color-night: #0b0d17;        /* page background */
+  --color-dusk: #151826;         /* cards */
+  --color-dusk-raised: #1c2032;  /* inputs and buttons inside cards */
+  --color-line: #252a3d;         /* card borders, tracks */
+  --color-moonlight: #f4f1ea;    /* primary text */
+  --color-haze: #8a8fa3;         /* secondary text */
+  --color-sun: #f2cb66;          /* the warm yellow accent */
+  --color-sun-deep: #e0b54a;
+  --color-lavender: #8b90f0;     /* night icons */
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.25rem;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-night);
+  color: var(--color-moonlight);
+}
+
+/* Numbers that change (times, durations) keep a fixed width so they don't jiggle. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
